@@ -1,0 +1,18 @@
+{% extends 'contacts/layout.html' %}
+
+
+{% block content %}
+
+<p>Lista:</p>
+
+{% if lista_kontaktow %}
+
+    {% for c in lista_kontaktow %}
+        <p>Imie: {{ c.first_name }}  Nazwisko: {{ c.last_name }} Email: {{c.email }}</p>
+    {% endfor %}
+
+{% else %}
+    <p>lista jest pusta</p>
+{% endif %}
+
+{% endblock %}

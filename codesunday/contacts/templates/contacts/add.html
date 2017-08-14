@@ -1,0 +1,13 @@
+{% extends 'contacts/layout.html' %}
+
+{% block content %}
+
+<form method="post">
+    {% csrf_token %}
+    <label for="first_name_id">Imie</label>
+    <input  value="{{ post.first_name }}" id="first_name_id" name="first_name" type="text">
+</form>
+
+DEBUG:
+{{ post.first_name }}
+{% endblock %}
